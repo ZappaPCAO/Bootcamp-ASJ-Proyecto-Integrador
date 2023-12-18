@@ -122,9 +122,7 @@ function imprimirTabla(tipo) { // tipo => proveedores, articulos, oc
     }
 }
 
-// const tablaProv = document.getElementsByName("listado-prov");
-// const tablaArt = document.getElementsByName("listado-art");
-// const tablaOC = document.getElementsByName("listado-oc");
+// const tablas = document.getElementsByName("listado");
 
 // for (let i = 0; i<tablas.length; i++) {
 //     tablas[i].addEventListener("click", (e)=>{

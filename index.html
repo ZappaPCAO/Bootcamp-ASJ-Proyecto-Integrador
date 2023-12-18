@@ -38,7 +38,7 @@
             </ul>
         </nav>
         <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
+            <aside id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
@@ -72,7 +72,7 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" id="listado-prov" href="pages/tables-provedores.html">Listado Provedores</a>
+                                            <a class="nav-link" name="listado" id="listado-prov" href="pages/tables-provedores.html">Listado Provedores</a>
                                             <a class="nav-link" href="pages/formulario-proveedores.html">Agregar provedor</a>                                      
                                         </nav>
                                     </div>
@@ -82,7 +82,7 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" id="listado-art" href="pages/tables-articulo.html">Listado de Articulos</a>
+                                            <a class="nav-link" name="listado" id="listado-art" href="pages/tables-articulo.html">Listado de Articulos</a>
                                             <a class="nav-link" href="pages/formulario-articulo.html">Agregar Articulo</a>                                      
                                         </nav>
                                     </div>
@@ -92,7 +92,7 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" id="listado-oc" href="pages/tables-oc.html">Listado de Ordenes de Compra</a>
+                                            <a class="nav-link" name="listado" id="listado-oc" href="pages/tables-oc.html">Listado de Ordenes de Compra</a>
                                             <a class="nav-link" href="pages/formulario-OC.html">Agregar Orden de Compra</a>                                      
                                         </nav>
                                     </div>
@@ -125,7 +125,7 @@
                         Tomás Zappalá
                     </div>
                 </nav>
-            </div>
+            </aside>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
@@ -217,8 +217,21 @@
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
         <script src="js/tabla.js"></script>
-        <script>            
-            imprimirTabla('P');           
+        <script> 
+            let opcion = Math.floor(Math.random() * 3)
+            
+            switch (opcion) {
+                case 0:
+                    imprimirTabla('P'); 
+                    break;
+                case 1:
+                    imprimirTabla('A'); 
+                    break;                
+            
+                default:
+                    imprimirTabla('O'); 
+                    break;
+            }          
         </script>
     </body>
 </html>
